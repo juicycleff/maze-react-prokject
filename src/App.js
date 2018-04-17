@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Layer, Rect, Stage, Group, Image} from 'react-konva';
+import {Layer, Rect, Stage, } from 'react-konva';
 
 function block(top, bottom, left, right, visted){
   this.top = top;
@@ -19,7 +19,8 @@ class App extends Component {
     gameEnded: false,
     totalMoves: 0,
     currentPosition: {},
-    graphItems: []
+    graphItems: [],
+    nodeList: []
   }
   
   initGame(){
@@ -55,7 +56,6 @@ class App extends Component {
         graphItem.visited = false;
 
         if (random === 2) {
-          console.log(random);
           // ctx.drawImage(myImage, x, y, w, h);
           graphItem.x = x;
           graphItem.y = y;
@@ -64,7 +64,6 @@ class App extends Component {
           graphItem.enemy = true;
 
         } else {
-          console.log(random);
           graphItem.x = x;
           graphItem.y = y;
           graphItem.w = w;
@@ -82,7 +81,6 @@ class App extends Component {
     for(var i = 0; i < graphItems.length; i++){
       for(var j = 0; j < graphItems.length; j++){
         graphItems[i][j];
-        console.log(graphItems[i][j];);
       }
     }
   }
